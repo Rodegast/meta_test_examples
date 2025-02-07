@@ -1,6 +1,6 @@
 from dsl import *
 
-TEST["Провенрка открывания меню"](
+TEST["Проверка открытия меню"](
 	URL("/menu")
 	, ONE("#nav > li> ul", "css::display") == "none"
 	, HOVER("Main Item 2")

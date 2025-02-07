@@ -16,4 +16,3 @@ test = TEST["text-box"](
 	, ONE("p#permanentAddress") == "Permananet Address :" + NP("data", "адрес2")
 	, tags = "form"
 )
-#for x in range(100): test(nnn=x)

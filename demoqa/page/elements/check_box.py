@@ -11,10 +11,9 @@ TEST["Check Box"](
 	, "Нажимаем"
 	, CLICK("button.rct-option.rct-option-expand-all")
 	, CLICK("[0]::span.rct-checkbox")
-	#, CLICK("css[4]::span.rct-checkbox")
 	
 	, "Проверяем"
 	, ALL("span.rct-title") == ['Home', 'Desktop', 'Notes', 'Commands', 'Documents', 'WorkSpace', 'React', 'Angular', 'Veu', 'Office', 'Public', 'Private', 'Classified', 'General', 'Downloads', 'Word File.doc', 'Excel File.doc']
 	
-	, tags = "button"#{"form", "button"}
+	, tags = "button,form"
 )
