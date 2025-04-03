@@ -9,3 +9,7 @@
 
 ## qa-practice
 Пример тестов для сайта https://www.qa-practice.com/
+
+## todomvc
+Пример тестов для сайта https://todomvc.com
+
