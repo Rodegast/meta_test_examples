@@ -4,6 +4,7 @@ text_fild = "#id_text_string"
 
 TEST["Text input"](
 	URL("/elements/input/simple")
+	
 	, "This is a required field"
 	, ONE(text_fild, "required") == True
 	
@@ -23,11 +24,11 @@ TEST["Text input"](
 	, ONE("#result-text") == "123"
 	
 	, tags="intput"
-	, single_thread=False
 )
 
 TEST["Text input"](
 	URL("/elements/input/email")
+	
 	, "Entered text should be a valid email address"
 	, DATA("#id_email", "123")
 	, KEY("#id_email", "enter")
@@ -39,11 +40,11 @@ TEST["Text input"](
 	, ONE("#result-text") == "user@examaple.com"
 	
 	, tags="intput"
-	, single_thread=False
 )
 
 TEST["Password field"](
 	URL("/elements/input/passwd")
+	
 	, "Has minimum 8 characters in length"
 	, DATA("#id_password", "123")
 	, KEY("#id_password", "enter")
@@ -70,5 +71,4 @@ TEST["Password field"](
 	, ONE("#result-text") == "Aa#123456789"
 	
 	, tags="intput"
-	, single_thread=False
 )

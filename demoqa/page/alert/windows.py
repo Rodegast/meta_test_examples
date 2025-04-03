@@ -29,4 +29,5 @@ TEST["browser-windows"](
 	
 	, browser="firefox"
 	, tags = "window"
+	, description="Тест проверки всплывающих окон. Работает только на firefox."
 )

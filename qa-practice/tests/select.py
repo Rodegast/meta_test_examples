@@ -16,11 +16,11 @@ TEST["Single select"](
 	, ONE("#result-text") == "Python"
 	
 	, tags="select"
-	, single_thread=False
 )
 
 TEST["Multiple selects"](
 	URL("/elements/select/mult_select")
+	
 	, "There should be 3 fields, All the fields are required"
 	, ONE("#id_choose_when_you_want_to_go", "required") == True
 	, ONE("#id_choose_the_place_you_want_to_go", "required") == True
@@ -38,5 +38,4 @@ TEST["Multiple selects"](
 	, ONE("#result-text") == "to go by car to the sea today"
 	
 	, tags="select"
-	, single_thread=False
 )

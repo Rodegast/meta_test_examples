@@ -2,6 +2,7 @@ from dsl import *
 
 TEST["Single checkbox"](
 	URL("/elements/checkbox/single_checkbox")
+	
 	, "There should be one checkbox on the page"
 	, ONE("//*[@type=\"checkbox\"]")
 	
@@ -22,11 +23,11 @@ TEST["Single checkbox"](
 	, NOT("#result-text")
 	
 	, tags="checkboxes"
-	, single_thread=False
 )
 
 TEST["Checkboxes"](
 	URL("/elements/checkbox/mult_checkbox")
+	
 	, "There should be three checkboxes on the page."
 	, COUNT("//*[@type=\"checkbox\"]")
 	
@@ -52,5 +53,4 @@ TEST["Checkboxes"](
 	, NOT("#result-text")
 	
 	, tags="checkboxes"
-	, single_thread=False
 )

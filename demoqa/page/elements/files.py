@@ -3,9 +3,10 @@ from dsl import *
 
 TEST["Закачка"](
 	URL("/upload-download")
-	, UPLOAD("#uploadFile", __file__)
-	, ONE("#uploadedFilePath") == "C:\\fakepath\\"+os.path.basename(__file__)
-	, tags="file1"
+	, UPLOAD("#uploadFile", "scope::data/image")
+	, ONE("#uploadedFilePath") == "C:\\fakepath\\"+NP("data", "image_name")
+	
+	, tags="file"
 )
 
 TEST["Загрузка"](
@@ -16,4 +17,3 @@ TEST["Загрузка"](
 	
 	, tags="file"
 )
-

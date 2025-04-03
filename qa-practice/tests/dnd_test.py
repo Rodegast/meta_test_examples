@@ -23,7 +23,6 @@ TEST["Boxes"](
 	, SCRIPT("in_element", external=rect_droppable, internal=rect_fixed)
 	
 	, tags="dnd"
-	, single_thread=False
 )
 
 droppable1 = "#rect-droppable1"
@@ -47,6 +46,5 @@ TEST["Images"](
 	, ONE("#rect-droppable1 .text-droppable") == "Dropped!"
 	
 	, tags="dnd"
-	, single_thread=False
 )
 

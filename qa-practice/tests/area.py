@@ -2,6 +2,7 @@ from dsl import *
 
 TEST["Textarea"](
 	URL("/elements/textarea/single")
+	
 	, "Field name is \"Text area\""
 	, ONE("//label[@for=\"id_text_area\"]") == "Text area*"
 	
@@ -9,9 +10,7 @@ TEST["Textarea"](
 	, ONE("#id_text_area", "required") == True
 	
 	, "User should be able to enter any text into this field"
-	, SCREENSHOT(css="#id_text_area {border: 5px solid red}")
 	, DATA("#id_text_area", "Text")
-	, SCREENSHOT("#id_text_area", css="#id_text_area {border: none}")
 	
 	, "The result can be sent using the Submit button"
 	, CLICK("#submit-id-submit")
@@ -20,15 +19,15 @@ TEST["Textarea"](
 	, ONE("#result-text") == "Text"
 	
 	, tags="area"
-	, single_thread=False
 )
 
 TEST["Multiple textareas"](
 	URL("/elements/textarea/textareas")
+	
 	, "There should be 3 fields"
-	, ONE("//label[@for=\"id_first_chapter\"]") == "First chapter*"
+	, ONE("//label[@for=\"id_first_chapter\"]")  == "First chapter*"
 	, ONE("//label[@for=\"id_second_chapter\"]") == "Second chapter"
-	, ONE("//label[@for=\"id_third_chapter\"]") == "Third chapter"
+	, ONE("//label[@for=\"id_third_chapter\"]")  == "Third chapter"
 	
 	, "The field First chapter is required"
 	, ONE("#id_first_chapter", "required") == True
@@ -45,5 +44,4 @@ TEST["Multiple textareas"](
 	, ONE("#result-text", "innerText") == "First\nSecond\nThird"
 	
 	, tags="area"
-	, single_thread=False
 )

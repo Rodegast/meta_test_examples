@@ -1,10 +1,10 @@
 from dsl import *
 
 SCRIPT["datepicker"](
-	CLICK("["+ARG("idx", default="0")+"]::.react-datepicker-wrapper")
+	CLICK("["+ARG("idx", default="1")+"]::.react-datepicker-wrapper")
 	, DATA("select.react-datepicker__month-select", ARG("month"))
 	, DATA("select.react-datepicker__year-select", ARG("year"))
-	, CLICK("["+ARG("idx", default="0")+"]::.react-datepicker__day--0"+ARG("day"))
+	, CLICK("["+ARG("idx", default="1")+"]::.react-datepicker__day--0"+ARG("day"))
 )
 
 SCRIPT["react-datepicker"](

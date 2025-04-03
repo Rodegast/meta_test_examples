@@ -2,6 +2,7 @@ from dsl import *
 
 TEST["Simple button"](
 	URL("/elements/button/simple")
+	
 	, "The user should be able to click the button."
 	, CLICK("#submit-id-submit")
 	
@@ -12,11 +13,11 @@ TEST["Simple button"](
 	, ONE("#submit-id-submit", "attr::value") == "Click"
 	
 	, tags="button"
-	, single_thread=False
 )
 
 TEST["Looks like a button"](
 	URL("/elements/button/like_a_button")
+	
 	, "The user should be able to click the button."
 	, CLICK(".a-button")
 	
@@ -27,11 +28,11 @@ TEST["Looks like a button"](
 	, ONE(".a-button") == "Click"
 	
 	, tags="button"
-	, single_thread=False
 )
 
 TEST["Disabled"](
 	URL("/elements/button/disabled")
+	
 	, "Submit button should be disabled by default."
 	, ONE("#submit-id-submit", "disabled") == True
 	
@@ -48,6 +49,5 @@ TEST["Disabled"](
 	, ONE("#result-text") == "Submitted"
 	
 	, tags="button"
-	, single_thread=False
 )
 

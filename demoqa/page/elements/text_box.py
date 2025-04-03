@@ -2,6 +2,7 @@ from dsl import *
 
 test = TEST["text-box"](
 	URL("/text-box")
+	
 	, "Заполняем"
 	, DATA("#userName", "scope::data/фио")
 	, DATA("#userEmail", "scope::data/email")
@@ -14,5 +15,6 @@ test = TEST["text-box"](
 	, ONE("#email") == "Email:" + NP("data", "email")
 	, ONE("p#currentAddress") == "Current Address :" + NP("data", "адрес1")
 	, ONE("p#permanentAddress") == "Permananet Address :" + NP("data", "адрес2")
+	
 	, tags = "form"
 )

@@ -2,6 +2,7 @@ from dsl import *
 
 TEST["Tool Tips"](
 	URL("/tool-tips")
+	
 	, "Кнопка"
 	, HOVER("#toolTipButton")
 	, ONE("#buttonToolTip") == "You hovered over the Button"
@@ -9,5 +10,11 @@ TEST["Tool Tips"](
 	, "Текстовое поле"
 	, HOVER("#toolTipTextField")
 	, ONE("#textFieldToolTip") == "You hovered over the text field"
-	, tags = "tool"
+	
+	, "Ссылка"
+	, HOVER("text::Contrary")
+	, ANY("Contrary", "attr::aria-describedby") == "contraryTexToolTip"
+	, ONE("[role=\"tooltip\"]") == "You hovered over the Contrary"
+	
+	, tags = "tooltip"
 )
