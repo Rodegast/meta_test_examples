@@ -21,6 +21,8 @@ TEST["react-todo"](
 	, "Удаление"
 	, CLICK("button.destroy")
 	, NOT("li[data-testid=\"todo-item\"]")
+	
+	, test_id="react"
 )
 
 TEST["react-redux-todo"](
@@ -41,6 +43,8 @@ TEST["react-redux-todo"](
 	, "Удаление"
 	, CLICK("button.destroy")
 	, NOT("li[data-testid=\"todo-item\"]")
+	
+	, test_id="redux"
 )
 
 TEST["vue-todo"](
@@ -61,6 +65,8 @@ TEST["vue-todo"](
 	, "Удаление"
 	, CLICK("[1]::button.destroy")
 	, NOT("ul.todo-list > li")
+	
+	, test_id="vue"
 )
 
 TEST["preact-todo"](
@@ -81,6 +87,8 @@ TEST["preact-todo"](
 	, "Удаление"
 	, CLICK("[1]::button.destroy")
 	, NOT("li[data-testid=\"todo-item\"]")
+	
+	, test_id="preact"
 )
 
 TEST["backbone-todo"](
@@ -101,6 +109,8 @@ TEST["backbone-todo"](
 	, "Удаление"
 	, CLICK("[1]::button.destroy")
 	, NOT("li[data-testid=\"todo-item\"]")
+	
+	, test_id="backbone"
 )
 
 TEST["angular-todo"](
@@ -121,6 +131,8 @@ TEST["angular-todo"](
 	, "Удаление"
 	, CLICK("[1]::button.destroy")
 	, NOT("[1]::ul.todo-list > app-todo-item")
+	
+	, test_id="angular"
 )
 
 TEST["jquery-todo"](
@@ -141,25 +153,6 @@ TEST["jquery-todo"](
 	, "Удаление"
 	, CLICK("[1]::button.destroy")
 	, NOT("[1]::ul.todo-list > app-todo-item")
-)
-
-TEST["jquery-todo"](
-	URL("/examples/jquery/dist/")
-	, ALL(["#info", "p", "a"])
 	
-	, "Ввод первого TODO"
-	, DATA("pht::What needs to be done?", start_data, press="ENTER")
-	
-	, "Редактирование"
-	, DOUBLE_CLICK(["[1]::.view", "label"])
-	, DATA("li.editing > input.edit", input_data, press="ENTER")
-	, ALL("[1]::.view > label") == input_data
-	
-	, "Отметка завершения"
-	, CLICK("[1]::input.toggle")
-	, ONE("[1]::.view > label", "css::text-decoration") < "line-through"
-	
-	, "Удаление"
-	, CLICK("[1]::button.destroy")
-	, NOT("[1]::ul.todo-list > app-todo-item")
+	, test_id="jquery"
 )

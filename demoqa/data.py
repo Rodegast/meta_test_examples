@@ -1,6 +1,7 @@
 import os
-from dsl import *
 from faker import Faker
+
+from dsl import *
 
 fake = Faker("ru_RU")
 

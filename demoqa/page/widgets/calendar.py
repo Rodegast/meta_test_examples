@@ -15,8 +15,8 @@ TEST["Select Date"](
 TEST["Select Date"](
 	URL("/date-picker")
 	, CLICK("[1]::.react-datepicker-wrapper")
-	, DATA("select.react-datepicker__month-select", 0, wait_timeout=0)
-	, DATA("select.react-datepicker__year-select", "1990", wait_timeout=0)
+	, DATA("select.react-datepicker__month-select", 0)
+	, DATA("select.react-datepicker__year-select", "1990")
 	, CLICK("[1]::.react-datepicker__day--001")
 	, ONE("#datePickerMonthYearInput") == "01/01/1990"
 	, tags="widget,calendar"

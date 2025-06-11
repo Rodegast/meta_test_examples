@@ -5,14 +5,14 @@ TEST["Radio Button"](
 	
 	, "Yes"
 	, CLICK("[1]::div.custom-control.custom-radio.custom-control-inline")
-	, ONE("p.mt-3>span") == "Yes"
+	, ONE("[1]::.custom-radio") == "Yes"
 	
 	, "Impressive"
 	, CLICK("[2]::div.custom-control.custom-radio.custom-control-inline")
-	, ONE("p.mt-3>span") == "Impressive"
+	, ONE("[2]::.custom-radio") == "Impressive"
 	
 	, "No"
 	, ONE("#noRadio", "disabled") == True
 	
-	, tags = "button"
+	, tags = "radio,button"
 )
