@@ -8,7 +8,7 @@ TEST["Buttons"](
 	, ONE("#dynamicClickMessage") == "You have done a dynamic click"
 	
 	, "You have done a right click"
-	, MOUSE_MENU("#rightClickBtn")
+	, RIGHT_CLICK("#rightClickBtn")
 	, ONE("#rightClickMessage") == "You have done a right click"
 	
 	, "You have done a double click"
